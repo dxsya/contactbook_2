@@ -1,0 +1,98 @@
+@font-face {
+    font-family: "BACKTO1982";
+    src: url(./fonts/back-to-1982/BACKTO1982.TTF);
+}
+
+@font-face {
+    font-family: "fff";
+    src: url(./fonts/fff-forward/FFFFORWA.TTF);
+}
+
+@font-face {
+    font-family: "Arcade";
+    src: url(./fonts/arcadeclassic/ARCADECLASSIC.TTF);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Arcade", serif;
+}
+
+button,
+select,
+input {
+    -webkit-box-shadow: 5px 4px 0px -1px rgba(13, 16, 19, 0.4);
+    -moz-box-shadow: 5px 4px 0px -1px rgba(13, 16, 19, 0.4);
+    box-shadow: 5px 4px 0px -1px rgba(13, 16, 19, 0.4);
+}
+
+.container {
+    width: 1080px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding-top: 15px;
+}
+
+.contact-book {
+    padding: 25px;
+    margin: 0 auto;
+    width: 95%;
+    background-color: white;
+    border: 6px double black;
+    -webkit-box-shadow: 13px 12px 0px -1px rgba(13, 16, 19, 0.4);
+    -moz-box-shadow: 13px 12px 0px -1px rgba(13, 16, 19, 0.4);
+    box-shadow: 13px 12px 0px -1px rgba(13, 16, 19, 0.4);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-sort {
+    display: flex;
+    align-items: center;
+}
+
+.contact-book-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts {
+    border: 3px solid black;
+    height: 400px;
+    width: 50%;
+    overflow: scroll;
+    margin-top: 25px;
+    padding: 5px;
+}
+
+.content {
+    text-align: center;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact {
+    border: 3px solid black;
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.contacts::-webkit-scrollbar {
+    width: 10px; /* width of the entire scrollbar */
+    height: 0;
+}
+.contacts::-webkit-scrollbar-track {
+    background: white; /* color of the tracking area */
+    height: 50px;
+}
+.contacts::-webkit-scrollbar-thumb {
+    background-color: rgb(84, 84, 84); /* color of the scroll thumb */
+}
