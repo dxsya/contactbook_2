@@ -8,7 +8,6 @@ let modalCloseBtn = document.querySelector(".modal-close-btn");
 let modalCloseBtn2 = document.querySelector(".modal-close-btn2");
 let saveContactBtn = document.querySelector(".contact-save-btn");
 let editModal = document.querySelector(".edit-contact-modal");
-console.log(editModal);
 
 //! search
 let searchInp = document.querySelector("#search");
@@ -16,11 +15,13 @@ let searchVal = "";
 
 //! инпуты для данных контакта
 let contactName = document.querySelector("#name");
+let contactLastname = document.querySelector("#lastname");
 let contactEmail = document.querySelector("#email");
 let contactImg = document.querySelector("#img");
 
 // !инпуты для редактирования контакта
 let editContactName = document.querySelector("#editName");
+let editContactLastname = document.querySelector("#editLastname");
 let editContactEmail = document.querySelector("#editEmail");
 let editContactImg = document.querySelector("#editImg");
 
@@ -45,6 +46,7 @@ modalCloseBtn2.addEventListener("click", () => {
 contactCreaterBtn.addEventListener("click", async function () {
     let newContact = {
         name: contactName.value,
+        lastname: contactLastname.value,
         email: contactEmail.value,
         image: contactImg.value,
     };
@@ -56,6 +58,7 @@ contactCreaterBtn.addEventListener("click", async function () {
         body: JSON.stringify(newContact),
     });
     contactName.value = "";
+    contactLastname.value = "";
     contactEmail.value = "";
     contactImg.value = "";
 
@@ -76,6 +79,9 @@ async function render() {
         if (element.name == "") {
             element.name = "/no name";
         }
+        if (element.lastname == "") {
+            element.lastname = "/no lastname";
+        }
         if (element.email == "") {
             element.email = "/no email";
         }
@@ -87,7 +93,7 @@ async function render() {
                                 <div class="image"><img src=${element.image}></div>
                             </div>
                             <div class="card-info">
-                                <p>${element.name}</p>
+                                <p>${element.name}</p> <span>${element.lastname}</span>
                                 <p>${element.email}</p>
                             </div>
                             <div class="card-buttons">
@@ -120,6 +126,7 @@ document.addEventListener("click", function (e) {
         fetch(`${API}/${id}`).then((res) =>
             res.json().then((data) => {
                 editContactName.value = data.name;
+                editContactLastname.value = data.lastname;
                 editContactEmail.value = data.email;
                 editContactImg.value = data.image;
                 saveContactBtn.setAttribute("id", data.id);
@@ -131,6 +138,7 @@ document.addEventListener("click", function (e) {
 //! сохранение контакта
 saveContactBtn.addEventListener("click", function () {
     let id = this.id;
+    let lastname = editContactLastname.value;
     let name = editContactName.value;
     let email = editContactEmail.value;
     let img = editContactImg.value;
@@ -143,9 +151,13 @@ saveContactBtn.addEventListener("click", function () {
     if (email == "") {
         email = "/no email";
     }
+    if (lastname == "") {
+        lastname = "/no lastname";
+    }
 
     let editedContact = {
         name: name,
+        lastname: lastname,
         email: email,
         image: img,
     };
@@ -161,3 +173,14 @@ function saveContact(editedContact, id) {
     editModal.style.display = "none";
     content.style.display = "flex";
 }
+
+function sortBy() {
+    let sorted = [];
+    fetch(API)
+        .then((res) => res.json())
+        .then((data) => {
+            sorted = data;
+        });
+    console.log(sorted);
+}
+sortBy();

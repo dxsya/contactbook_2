@@ -14,9 +14,23 @@
     },
     {
       "name": "jordan23",
-      "email": "isalm.daneurs",
+      "email": "michael",
       "image": "./icons/iconAvatar2.png",
       "id": 3
+    },
+    {
+      "name": "sad",
+      "lastname": "xzc",
+      "email": "asd",
+      "image": "",
+      "id": 4
+    },
+    {
+      "name": "/no name",
+      "lastname": "/no lastname",
+      "email": "zxc",
+      "image": "./icons/iconAvatar2.png",
+      "id": 5
     }
   ]
 }
