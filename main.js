@@ -8,6 +8,16 @@ let modalCloseBtn = document.querySelector(".modal-close-btn");
 let modalCloseBtn2 = document.querySelector(".modal-close-btn2");
 let saveContactBtn = document.querySelector(".contact-save-btn");
 let editModal = document.querySelector(".edit-contact-modal");
+let contactsShow = document.querySelector(".show");
+let contactsHide = document.querySelector(".hide");
+let contactCard = document.querySelectorAll(".contact-card");
+
+//! show hide contacts
+contactsShow.addEventListener("click", () => {
+    contactCard.forEach((x) => {
+        x.style.display = "flex";
+    });
+});
 
 //! search
 let searchInp = document.querySelector("#search");
@@ -93,7 +103,7 @@ async function render() {
                                 <div class="image"><img src=${element.image}></div>
                             </div>
                             <div class="card-info">
-                                <span>${element.name}..</span> <span>${element.lastname}</span>
+                                <span>${element.name}</span> <span>${element.lastname}</span>
                                 <p>${element.email}</p>
                             </div>
                             <div class="card-buttons">
@@ -184,3 +194,4 @@ function sortBy() {
     console.log(sorted);
 }
 sortBy();
+//
