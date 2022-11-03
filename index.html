@@ -12,7 +12,20 @@
         <div class="container">
             <div class="contact-book">
                 <div class="navbar">
-                    <div><button>left</button> <button>right</button></div>
+                    <div class="nav-buttons">
+                        <button>
+                            <img
+                                src="https://cdn-icons-png.flaticon.com/512/40/40761.png"
+                                alt=""
+                            />
+                        </button>
+                        <button>
+                            <img
+                                src="https://cdn-icons-png.flaticon.com/512/41/41993.png"
+                                alt=""
+                            />
+                        </button>
+                    </div>
                     <select name="" id="">
                         <option value="">friends</option>
                         <option value="">family</option>
@@ -25,16 +38,57 @@
                             <option value="">By email</option>
                         </select>
                     </div>
-                    <button>Create Contact</button>
+                    <button class="create-contact">Create Contact</button>
                     <div class="search">
-                        <input type="text" name="" id="" placeholder="search" />
+                        <img
+                            src="https://cdn-icons-png.flaticon.com/512/7734/7734281.png"
+                            alt=""
+                        />
+                        <input
+                            type="search"
+                            name=""
+                            id="search"
+                            placeholder="search"
+                        />
                     </div>
                 </div>
                 <div class="contact-book-content">
-                    <div class="contacts"></div>
+                    <div class="contacts">
+                        <div class="contact-card">
+                            <div class="contact-card-image">
+                                <div class="image"></div>
+                            </div>
+                            <div class="card-info">
+                                <p>Name</p>
+                                <p>Email</p>
+                            </div>
+                            <div class="card-buttons">
+                                <button class="contact-edit">Edit</button>
+                                <button class="contact-delete">Delete</button>
+                            </div>
+                        </div>
+                    </div>
                     <div class="content">
                         <h3>No contact selected</h3>
                         <div class="contact"></div>
+                    </div>
+                    <div class="create-contact-modal">
+                        <button class="modal-close-btn"><p>x</p></button>
+                        <p>new contact</p>
+                        <input
+                            type="text"
+                            name=""
+                            id="name"
+                            placeholder="name"
+                        />
+                        <input
+                            type="text"
+                            name=""
+                            id="email"
+                            placeholder="email"
+                        />
+                        <input type="text" name="" id="img" placeholder="img" />
+                        <button class="contact-creator-btn">Create</button>
                     </div>
                 </div>
             </div>

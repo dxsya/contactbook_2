@@ -13,6 +13,10 @@
     src: url(./fonts/arcadeclassic/ARCADECLASSIC.TTF);
 }
 
+*:focus {
+    outline: none;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -27,11 +31,32 @@ input {
     box-shadow: 5px 4px 0px -1px rgba(13, 16, 19, 0.4);
 }
 
+.nav-buttons button {
+    width: 30px;
+}
+
+button img {
+    width: 15px;
+}
+
+.search img {
+    width: 20px;
+}
+
+.search input {
+    padding: 3px 5px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
 .container {
     width: 1080px;
     height: 500px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 50px;
     padding-top: 15px;
 }
 
@@ -72,7 +97,8 @@ input {
 
 .content {
     text-align: center;
-    width: 400px;
+    margin-right: 3%;
+    max-width: 100vmax;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,7 +106,7 @@ input {
 
 .contact {
     border: 3px solid black;
-    width: 200px;
+    width: 400px;
     height: 100px;
     margin: 0 auto;
 }
@@ -88,11 +114,102 @@ input {
 .contacts::-webkit-scrollbar {
     width: 10px; /* width of the entire scrollbar */
     height: 0;
+    background-color: white;
 }
 .contacts::-webkit-scrollbar-track {
-    background: white; /* color of the tracking area */
+    background: black; /* color of the tracking area */
     height: 50px;
 }
 .contacts::-webkit-scrollbar-thumb {
     background-color: rgb(84, 84, 84); /* color of the scroll thumb */
+}
+
+.contact-card {
+    border: 2px solid black;
+    width: 97%;
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 6px 5px 0px -1px rgba(13, 16, 19, 0.4);
+    -moz-box-shadow: 6px 5px 0px -1px rgba(13, 16, 19, 0.4);
+    box-shadow: 6px 5px 0px -1px rgba(13, 16, 19, 0.4);
+}
+
+.contact-card:hover {
+    background-color: rgb(237, 237, 237);
+    transition: 0.2s;
+}
+
+.card-info {
+    font-size: 23px;
+    width: 300px;
+}
+
+.contact-card-info {
+    display: flex;
+}
+
+.image {
+    width: 60px;
+    height: 60px;
+    border: 1px solid;
+}
+
+.card-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+}
+
+.card-buttons button {
+    margin: 5px;
+    width: 60px;
+}
+
+.create-contact-modal {
+    padding: 10px;
+    border: 4px solid black;
+    width: 400px;
+    height: 240px;
+    position: absolute;
+    left: 55.5%;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-shadow: 6px 5px 0px -1px rgba(13, 16, 19, 0.4);
+    -moz-box-shadow: 6px 5px 0px -1px rgba(13, 16, 19, 0.4);
+    box-shadow: 6px 5px 0px -1px rgba(13, 16, 19, 0.4);
+    display: none;
+}
+
+.create-contact-modal input {
+    width: 80%;
+    height: 10%;
+    padding: 3px 8px;
+    margin: auto 0;
+}
+
+.create-contact-modal button {
+    margin-bottom: 10px;
+    width: 80px;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 0;
+    left: 95.4%;
+    -webkit-box-shadow: 0px 0px 0px -1px rgba(13, 16, 19, 0.4);
+    -moz-box-shadow: 0px 0px 0px -1px rgba(13, 16, 19, 0.4);
+    box-shadow: 0px 0px 0px -1px rgba(13, 16, 19, 0.4);
+    width: 20px !important;
+    height: 20px !important;
+    border: 2px solid;
+}
+
+.image img {
+    width: 60px;
+    height: 60px;
 }
