@@ -1,29 +1,25 @@
 {
   "contacts": [
     {
-      "name": "dosya godz",
+      "name": "dosya ",
       "email": "dxdgxd@gmail.com",
       "image": "https://sun3-12.userapi.com/impg/k0-KYILGwupS86bo6aQWBLQThZOBa_hv_tqcew/7rA3VKlbbJw.jpg?size=510x510&quality=96&sign=d51268350f7009eac44ade05d95d1563&c_uniq_tag=xcLsYO7h5F8a0T66dkxVBXvS8-nw6_SIf6VNNexlSaQ&type=album",
-      "id": 1
+      "id": 1,
+      "lastname": "Godz"
     },
     {
       "name": "baha",
-      "email": "deadinside",
+      "email": "1337",
       "image": "https://sun9-87.userapi.com/impg/BtCqc3crOel7ke8-4dK4-aRR7bq4xos71dshiQ/QH1pIMShMpQ.jpg?size=510x509&quality=96&sign=d123fe8747ae1a6d30b33f3196b61d73&c_uniq_tag=3rKMmkJwqHipVilh2gtjSs6gQWMA7g8_AyVMCX9rmkg&type=album",
-      "id": 2
+      "id": 2,
+      "lastname": "Deadinside"
     },
     {
       "name": "jordan23",
-      "email": "michael",
+      "email": "94210",
       "image": "./icons/iconAvatar2.png",
-      "id": 3
-    },
-    {
-      "name": "sad",
-      "lastname": "xzc",
-      "email": "asd",
-      "image": "",
-      "id": 4
+      "id": 3,
+      "lastname": "basket"
     },
     {
       "name": "/no name",
@@ -31,6 +27,27 @@
       "email": "zxc",
       "image": "./icons/iconAvatar2.png",
       "id": 5
+    },
+    {
+      "name": "norway",
+      "lastname": "yolo",
+      "email": "5600",
+      "image": "https://sun9-8.userapi.com/impg/leNKku0AwK7DUpMn_36skwUfCChwEdurXSGTNA/HKUpJu2Xjjc.jpg?size=510x510&quality=95&sign=26806ca810ebdb2d112c715ebb087412&c_uniq_tag=8Rm4CGGnDkIV-L61nrBG67NeemL1Eav0v2xzMGIcDj8&type=album",
+      "id": 6
+    },
+    {
+      "name": "terrorise",
+      "lastname": "cvoire",
+      "email": "90012349",
+      "image": "https://sun9-23.userapi.com/impg/LZSawSlIDC6WQ_u4WbX1vpV37wVVA8_J_Q1IcQ/aDYiOal4EqA.jpg?size=510x340&quality=95&crop=10,0,714,476&sign=5d3979f8d8fd2ca3122a771851d1e3d0&c_uniq_tag=hD4ejLszOWnD_N7oFVY6vIrB9atlKxM_9BIKE8f1how&type=album",
+      "id": 7
+    },
+    {
+      "name": "umeair",
+      "lastname": "lokine",
+      "email": "8420032",
+      "image": "https://sun9-39.userapi.com/impg/GnrbPflV29l_ekzFtjzNv0ZPTFnb6b7GPE4stQ/4eqr9I3FD1U.jpg?size=474x604&quality=95&sign=9fdf21fa7ed3078e0560cfebd2df0c1c&c_uniq_tag=hc2lIUPFNxAdHlKjgnyfQvherVNE432yVqXKxO9H_Ok&type=album",
+      "id": 8
     }
   ]
 }

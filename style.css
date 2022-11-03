@@ -32,7 +32,11 @@ input {
 }
 
 .nav-buttons button {
-    width: 30px;
+    width: 75px;
+}
+
+.nav-buttons span {
+    margin-bottom: 5px;
 }
 
 button img {
@@ -100,13 +104,18 @@ button img {
     justify-content: space-between;
 }
 
-.contacts {
+.contacts,
+.contacts2 {
     border: 3px solid black;
     height: 400px;
     width: 50%;
     overflow: scroll;
     margin-top: 25px;
     padding: 10px;
+    display: none;
+}
+.contacts2 {
+    display: block;
 }
 
 .content {
@@ -155,7 +164,7 @@ button img {
 }
 
 .contact-card:hover {
-    background-color: rgb(237, 237, 237);
+    background-color: rgb(194, 194, 194);
     transition: 0.2s;
 }
 

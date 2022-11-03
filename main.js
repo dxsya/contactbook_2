@@ -10,13 +10,18 @@ let saveContactBtn = document.querySelector(".contact-save-btn");
 let editModal = document.querySelector(".edit-contact-modal");
 let contactsShow = document.querySelector(".show");
 let contactsHide = document.querySelector(".hide");
-let contactCard = document.querySelectorAll(".contact-card");
+let contactList = document.querySelector(".contacts");
+let contactHide = document.querySelector(".contacts2");
 
 //! show hide contacts
 contactsShow.addEventListener("click", () => {
-    contactCard.forEach((x) => {
-        x.style.display = "flex";
-    });
+    contactList.style.display = "block";
+    contactHide.style.display = "none";
+});
+
+contactsHide.addEventListener("click", () => {
+    contactList.style.display = "none";
+    contactHide.style.display = "block";
 });
 
 //! search
@@ -76,7 +81,6 @@ contactCreaterBtn.addEventListener("click", async function () {
 });
 
 //! создание контактов
-let contactList = document.querySelector(".contacts");
 async function render() {
     let contacts = await fetch(`${API}?q=${searchVal}`)
         .then((res) => res.json())
@@ -189,7 +193,7 @@ function sortBy() {
     fetch(API)
         .then((res) => res.json())
         .then((data) => {
-            sorted = data;
+            sorted = [...data];
         });
     console.log(sorted);
 }
