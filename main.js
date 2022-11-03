@@ -93,7 +93,7 @@ async function render() {
                                 <div class="image"><img src=${element.image}></div>
                             </div>
                             <div class="card-info">
-                                <p>${element.name}</p> <span>${element.lastname}</span>
+                                <span>${element.name}..</span> <span>${element.lastname}</span>
                                 <p>${element.email}</p>
                             </div>
                             <div class="card-buttons">
